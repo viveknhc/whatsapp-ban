@@ -12,21 +12,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
 
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.svg" alt="logo" width="90" height="24">
+          <img src="assets/images/logo.png" alt="logo" width="90" height="24">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <!-- <span class="navbar-toggler-icon"></span> -->
-          <img class="img-fluid humberg" src="assets/images/humberg.png" alt="image">
+          <img class="img-fluid humberg" src="assets/images/toggle.png" alt="image">
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto nav-list">
@@ -39,7 +40,7 @@
           </ul>
 
           <div class="d-flex">
-            <button type="submit">Talk to Us</button>
+            <button data-bs-toggle="modal" data-bs-target="#talktous" type="submit">Talk to Us</button>
           </div>
 
         </div>
@@ -53,7 +54,7 @@
             <div class="banner-content">
               <h1> Fully extendable brand first <span>mobile commerce</span> platform</h1>
               <p class="py-lg-3">Flexible, customisable platform | Built to iterate and innovate.</p>
-              <button class="talk-to-us">Talk to Us</button>
+              <button data-bs-toggle="modal" data-bs-target="#talktous" class="talk-to-us">Talk to Us</button>
             </div>
 
           </div>
@@ -68,76 +69,38 @@
   <section>
     <div class="brand text-center">
       <div class="container">
-        <h4>We are an unofficial brand who helps people to remove <span>whatsapp ban</span> with 100% Security and
+
+        
+        <h4>
+          
+          We are an unofficial brand who helps people to remove <span class="black-text">whatsapp ban</span> with 100% Security and
           authenticity</h4>
       </div>
-    </div>
-  </section>
 
-  <style>
-    .scrollable-container {
-      height: 100vh;
-      /* Set a fixed height for the scrollable container */
-      overflow: hidden;
-      /* Hide overflow to prevent scrollbars */
-      position: relative;
-    }
+      <div class="animated-btn-box">
+        <button data-bs-toggle="modal" data-bs-target="#talktous" class="Btn">
+          <div class="sign">
+            <img src="assets/images/plus-white.png" alt="">
+          </div>
 
-    .rotating-image {
-      width: 200px;
-      /* Adjust the width as needed */
-      height: 200px;
-      /* Adjust the height as needed */
-      transition: transform 0.5s;
-      /* Add a smooth transition effect */
-    }
-  </style>
-
-  <section>
-    <div class="conatainer">
-      <div class="scrollable-container">
-        <img class="rotating-image img-fluid" src="assets/images/banner.png" alt="Rotating Image">
+          <div class="text">contact</div>
+        </button>
       </div>
+
+
+
     </div>
-
   </section>
-
-  <script>
-// Select the rotating image element
-const rotatingImage = document.querySelector('.rotating-image');
-
-// Define the rotation angle (in degrees) that you want to apply
-const rotationAngle = 90; // You can adjust this value
-
-// Function to handle the scroll event
-function handleScroll() {
-  // Calculate the current scroll position
-  const scrollPosition = window.scrollY;
-
-  // Check if the scroll position is within a specific range to trigger the rotation
-  if (scrollPosition >= 0 && scrollPosition <= 200) {
-    // Apply the rotation transform to the image
-    rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
-  } else {
-    // Reset the rotation if the scroll position is outside the range
-    rotatingImage.style.transform = 'rotate(0deg)';
-  }
-}
-
-// Add an event listener to the window's scroll event
-window.addEventListener('scroll', handleScroll);
-
-  </script>
 
   <section>
     <div class="feature">
       <div class="text-center head container">
-        <h4>Appmaker offers true extendability via themes & plugins</h4>
+        <h3> <span> Appmaker</span> offers true extendability via themes & plugins</h3>
         <P>Appmaker offers true extendability via themes & plugins</P>
       </div>
       <div class="container">
         <div class="row g-5">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -149,7 +112,7 @@ window.addEventListener('scroll', handleScroll);
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -161,7 +124,7 @@ window.addEventListener('scroll', handleScroll);
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -173,8 +136,7 @@ window.addEventListener('scroll', handleScroll);
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -186,8 +148,7 @@ window.addEventListener('scroll', handleScroll);
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -199,8 +160,7 @@ window.addEventListener('scroll', handleScroll);
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100">
               <div class="img-box">
                 <img src="assets/images/smartphone.png" class="card-img-top img-fluid" alt="...">
@@ -219,26 +179,98 @@ window.addEventListener('scroll', handleScroll);
 
   <section>
     <div class="container">
+      <div class="faq">
+        <div class="head">
+          <h3>
+            Frequently asked <span>questions</span>
+          </h3>
+
+        </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom
+                CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom
+                CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom
+                CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                the
+                <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="container">
       <div class="contact-us">
         <div class="row">
-          <div class="col-lg-8 d-flex justify-content-center align-items-center">
-            <div>
+          <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <div class="head">
               <h3>
-                What are you waiting for?? connect us
+                What are you waiting for?? <span> connect us </span>
               </h3>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur repellat debitis,</p>
-              <button class="talk-to-us">Talk to Us</button>
+              <button class="talk-to-us" data-bs-toggle="modal" data-bs-target="#talktous">Talk to Us</button>
             </div>
           </div>
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
             <div class="relative-box">
-              <img class="img-fluid ball1" src="assets/images/ball1.png" alt="">
-              <img class="img-fluid ball2" src="assets/images/ball2.png" alt="">
               <img class="img-fluid" src="assets/images/contact.png" alt="">
-              <img class="img-fluid ball3" src="assets/images/ball1.png" alt="">
-              <img class="img-fluid ball4" src="assets/images/ball2.png" alt="">
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -248,11 +280,10 @@ window.addEventListener('scroll', handleScroll);
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <h3>
-            Whatsapp Ban
-          </h3>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur dolorum soluta </p>
+          <h4>Whatsapp ban</h4>
+          <a href="about.html">
+            <p>About us</p>
+          </a>
 
         </div>
         <div class="col-lg-4">
@@ -273,8 +304,83 @@ window.addEventListener('scroll', handleScroll);
         </div>
       </div>
 
+      <hr>
+
+      <div class="footer-bottom">
+        <div>
+          <img class="logo" src="assets/images/White LOGO.png" alt="">
+        </div>
+
+        <div class="social-icon">
+          <img class="img-fluid  me-1" src="assets/images/linkedin.png" alt="">
+          <img class="img-fluid me-1" src="assets/images/facebook.png" alt="">
+          <img class="img-fluid  me-1" src="assets/images/twitter.png" alt="">
+          <img class="img-fluid  me-1" src="assets/images/instagram.png" alt="">
+        </div>
+
+      </div>
     </div>
   </footer>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="talktous" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <div class="text-end">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-8">
+              <div class="modal-head">
+                <h4>Contact Us</h4>
+              </div>
+              <form action="">
+                <div class="row g-lg-3">
+                  <div class="col-lg-6">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Name">
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Email">
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Ban Number</label>
+                    <input type="number" placeholder="Ban Number">
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Alternative Number</label>
+                    <input type="number" placeholder="Alternative Number">
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Ban Count</label>
+                    <input type="number" placeholder="Ban Count">
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Day of Ban</label>
+                    <input type="date" placeholder="Day of Ban">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn talktous-form-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>

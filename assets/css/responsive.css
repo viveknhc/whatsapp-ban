@@ -1,0 +1,88 @@
+/* TAB */
+
+@media only screen and (max-width:999px) {
+
+    header .navbar{
+        position: static;
+    }
+
+    .feature{
+        padding: 0 10px;
+        overflow: hidden;
+        height: auto;
+    }
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width:767px) {
+    header .navbar{
+        position: static;
+    }
+
+    .head {
+        padding: 30px 10px 52px 10px;
+    }    
+
+    .head h4 {
+        color: #888787;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .banner{
+        padding: 0 10px;
+    }
+
+    .banner .banner-content h1 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    
+    .banner .banner-content h1 span {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    .brand{
+        padding: 0 10px;
+    }
+
+    .brand h4 {
+        font-size: 31px;
+    }
+
+    .feature{
+        padding: 0 10px;
+        overflow: hidden;
+        height: auto;
+    }
+
+
+    footer .footer-bottom {
+        display: block;
+    }
+
+    footer .footer-bottom .social-icon{
+        margin-top: 20px;
+    }
+
+    footer {
+        padding: 50px 0;
+        background-color: #18191f;
+    }
+
+    .about .banner-content {
+        width: 100%;
+    }
+    .banner .banner-tag-box {
+        padding: 50px 40px;
+        background-color: #000000;
+        position: static;
+        width: 100%;
+    }
+
+
+
+}

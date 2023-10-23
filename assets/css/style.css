@@ -394,7 +394,7 @@ header nav .navbar-collapse li a {
 
 #talktous input {
     width: 100%;
-    padding: 5px 0;
+    padding: 10px 0;
     border-radius: 10px;
     border: 1px solid var(--primary-color);
     border: none;
@@ -405,13 +405,27 @@ header nav .navbar-collapse li a {
     padding: 0 0 0 10px;
 }
 
-#talktous .modal-head {
-    text-align: center;
-    padding: 0 0 28px 0;
+
+#talktous form label{
+    display: block;
 }
 
-#talktous .modal-head h4 {
-    color: var(--primary-color);
+#talktous .modal-head {
+    text-align: center;
+}
+
+#talktous .modal-head h3 {
+    color: #000000;
+}
+
+#talktous .modal-content {
+    border: none;
+    border-radius: 0; 
+    background-color: #D9D9D9;
+}
+
+.modal-body {
+    padding: 0;
 }
 
 /* #talktous .modal-content{

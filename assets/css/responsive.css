@@ -1,6 +1,9 @@
 /* TAB */
 
 @media only screen and (max-width:999px) {
+    .banner {
+        height: auto;
+    }
 
     header .navbar {
         position: static;
@@ -11,12 +14,27 @@
         overflow: hidden;
         height: auto;
     }
+
+    .banner .banner-shadow {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 
 /* MOBILE */
 
 @media only screen and (max-width:767px) {
+
+    header nav .logo {
+        max-width: 170px;
+    }
+
+    footer .logo {
+        max-width: 170px;
+    }
+
     .banner .banner-shadow {
         display: none;
     }
@@ -34,14 +52,18 @@
         padding: 30px 10px 52px 10px;
     }
 
-    .head h4 {
+    .head h3 {
         color: #888787;
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .head p {
+        font-size: 14px;
     }
 
     .banner {
         padding: 0 10px;
+        height: auto;
     }
 
     .banner .banner-content h1 {
@@ -66,6 +88,18 @@
         padding: 0 10px;
         overflow: hidden;
         height: auto;
+    }
+
+    .feature .card .card-text {
+        font-size: 14px;
+    }
+
+    .feature .card .card-title {
+        font-size: 16px;
+    }
+
+    .faq .head h3 {
+        font-size: 25px;
     }
 
 
@@ -125,6 +159,10 @@
     .inner-page .banner-content h1 span {
         font-size: 2.25rem;
         line-height: 2.5rem;
+    }
+
+    .pricing .price-box {
+        padding: 50px 0 0 0;
     }
 
 

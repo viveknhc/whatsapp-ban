@@ -24,6 +24,11 @@ header {
     background-color: var(--white-color);
 }
 
+header nav .logo{
+    max-width: 400px;
+}
+
+
 section {
     padding: 0 0 70px 0;
 }
@@ -522,7 +527,7 @@ footer {
 
 
 footer .logo {
-    max-width: 200px;
+    max-width: 400px;
 }
 
 footer hr {
@@ -545,6 +550,7 @@ footer a p {
 footer .footer-bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .footer-bottom .social-icon img {

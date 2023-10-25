@@ -46,6 +46,7 @@
 
     header .navbar {
         position: static;
+        padding: 0 10px;
     }
 
     .head {

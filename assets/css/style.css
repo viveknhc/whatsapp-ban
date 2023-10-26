@@ -322,15 +322,31 @@ header nav .navbar-collapse li a {
     color: #000;
 }
 
+.faq .accordion{
+    border: none;
+}
+
+.faq .accordion-item{
+    border: none;
+}
+
 .faq .accordion-button {
     border: none !important;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.faq .accordion-body{
+    font-size: 20px;
 }
 
 
 .faq .accordion-button:not(.collapsed) {
+    font-weight: 800;
     color: #000;
-    background-color: #d9ffe7;
+    background-color: #e4faec;
     box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+    /* border: 1px solid red; */
 }
 
 .faq .accordion-button:focus {

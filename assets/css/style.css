@@ -24,7 +24,7 @@ header {
     background-color: var(--white-color);
 }
 
-header nav .logo{
+header nav .logo {
     max-width: 250px;
 }
 
@@ -42,7 +42,7 @@ section {
     padding: 90px 0 0 0;
 }
 
-.banner .banner-shadow{
+.banner .banner-shadow {
     position: absolute;
     left: 18%;
     top: 7%;
@@ -259,18 +259,18 @@ header nav .navbar-collapse li a {
 
 .feature {
     padding: 0 0 50px 0;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.4);
+    background-color: rgb(244 245 247/.5);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 
 }
 
-.feature .bg-shadow{
+.feature .bg-shadow {
     position: absolute;
     right: 0;
     z-index: -1;
@@ -285,12 +285,12 @@ header nav .navbar-collapse li a {
 
 .feature .card .card-title {
     font-weight: 800;
-    font-size: 20px;
+    font-size: 27px;
 }
 
 .feature .card .card-text {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: #888787;
 }
 
@@ -322,11 +322,11 @@ header nav .navbar-collapse li a {
     color: #000;
 }
 
-.faq .accordion{
+.faq .accordion {
     border: none;
 }
 
-.faq .accordion-item{
+.faq .accordion-item {
     border: none;
 }
 
@@ -336,7 +336,7 @@ header nav .navbar-collapse li a {
     font-weight: 500;
 }
 
-.faq .accordion-body{
+.faq .accordion-body {
     font-size: 20px;
 }
 
@@ -351,6 +351,123 @@ header nav .navbar-collapse li a {
 
 .faq .accordion-button:focus {
     box-shadow: none;
+}
+
+/* HOW IT WORKS */
+
+.working .timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.working .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #c5c5c5;
+}
+
+.working .timeline ul {
+    padding: 0;
+    margin: 0;
+}
+
+.working .timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.working .timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.working .timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.working .content {
+    padding-bottom: 20px;
+}
+
+.working .timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 24px;
+    right: -6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(195 255 217);
+}
+
+.working .timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 24px;
+    left: -4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(195 255 217);
+}
+
+.working .timeline ul li h3 {
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 27px;
+    /* font-weight: 600; */
+}
+
+.working .timeline ul li p {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #7d7d7d;
+    font-size: 20px;
+}
+
+.working .timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.working .timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3);
+}
+
+.working .timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3);
 }
 
 /* CONTACT */
@@ -443,7 +560,7 @@ header nav .navbar-collapse li a {
     border: 1px solid #ededed;
 }
 
-#talktous .close-btn{
+#talktous .close-btn {
     max-width: 20px;
     cursor: pointer;
 }
@@ -473,7 +590,7 @@ header nav .navbar-collapse li a {
 
 #talktous input[type=date]::-webkit-calendar-picker-indicator:active {
     color: blue;
-} 
+}
 
 
 
@@ -509,7 +626,7 @@ header nav .navbar-collapse li a {
     font-weight: 600;
 }
 
-#talktous .modal-head h3 span{
+#talktous .modal-head h3 span {
     color: #000;
 }
 
@@ -519,9 +636,10 @@ header nav .navbar-collapse li a {
     background-color: #ffffff;
 }
 
-#talktous .contnet-box{
+#talktous .contnet-box {
     padding: 26px 26px 0px 0px;
 }
+
 .modal-body {
     padding: 0;
 }
@@ -576,7 +694,7 @@ footer .footer-bottom .social-icon img {
 
 /* ABOUT */
 
-.about{
+.about {
     height: auto;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -585,7 +703,7 @@ footer .footer-bottom .social-icon img {
     padding: 90px 0 30px 0;
 }
 
-.inner-page{
+.inner-page {
     height: auto;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -657,7 +775,7 @@ footer .footer-bottom .social-icon img {
 
 }
 
-.pricing .card{
+.pricing .card {
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     padding: 14px 14px;
     width: 22rem;
@@ -665,22 +783,22 @@ footer .footer-bottom .social-icon img {
 
 
 
-.pricing .card .top-text{
+.pricing .card .top-text {
     color: #000;
     font-weight: 900;
     color: var(--primary-color);
 }
 
-.pricing .card h2{
+.pricing .card h2 {
     color: #000;
     font-weight: 900;
 }
 
-.pricing .card h2 span{
+.pricing .card h2 span {
     font-size: 16px;
     color: #7e7e7e;
     font-weight: 100;
-  
+
 }
 
 .pricing .card h4 {
@@ -690,19 +808,19 @@ footer .footer-bottom .social-icon img {
 
 
 
-.pricing .card .sml-desc{
+.pricing .card .sml-desc {
     font-size: 16px;
     color: #7e7e7e;
     font-weight: 100;
 }
 
-.pricing .card .offer{
+.pricing .card .offer {
     font-size: 16px;
     color: #7e7e7e;
     font-weight: 100;
 }
 
-.pricing .price-box{
+.pricing .price-box {
     padding: 80px 0 0 0;
 }
 

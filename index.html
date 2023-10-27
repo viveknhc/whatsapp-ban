@@ -104,8 +104,8 @@
             your specific needs</h3>
         </div>
         <div class="price-box">
-          <div class="row g-lg-0 g-md-0 g-3">
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+          <div class="row g-lg-0 g-md-3 g-3">
+            <div class="col-lg-4 col-md-4 d-flex justify-content-center">
               <div class="card h-100">
                 <div class="card-body">
                   <p class="top-text">First</p>
@@ -127,7 +127,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4 d-flex justify-content-center">
               <div class="card h-100">
                 <div class="card-body">
                   <p class="top-text">Second</p>
@@ -149,7 +149,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4 d-flex justify-content-center">
               <div class="card h-100">
                 <div class="card-body">
                   <p class="top-text">Third</p>
@@ -182,7 +182,7 @@
       <img class="img-fluid bg-shadow" src="assets/images/banner-shadow.png" alt="">
       <div class="text-center head container">
         <h3> Why Choose <span>Us</span> </h3>
-  
+
       </div>
       <div class="container">
         <div class="row g-5">
@@ -234,7 +234,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -242,10 +242,111 @@
 
   <section>
     <div class="container">
+
+      <div class="text-center head container">
+        <h3> How it <span>Works</span> </h3>
+
+      </div>
+
       <div class="working">
-        
+
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="content">
+                <h3>Submit your request</h3>
+                <p>Fill out our simple form with your details and ban information. </p>
+              </div>
+
+            </li>
+
+            <li>
+              <div class="content">
+                <h3>Pay the service fee</h3>
+                <p> Make the payment securely via our website. </p>
+              </div>
+
+            </li>
+
+            <li>
+              <div class="content">
+                <h3>We take action</h3>
+                <p>Our experts will promptly work to remove the ban. </p>
+              </div>
+
+            </li>
+
+            <li>
+              <div class="content">
+                <h3>Enjoy your WhatsApp</h3>
+                <p> Once the ban is removed, you're free to use WhatsApp without any restrictions. </p>
+              </div>
+
+            </li>
+
+
+
+
+
+            <div style="clear:both;"></div>
+          </ul>
+        </div>
+
+
       </div>
     </div>
+  </section>
+
+  <style>
+    #textSection {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #textSection .wrapper h4{
+      font-size: 40px;
+      font-weight: 600;
+      font-family: apple-font;
+      color: #888787;
+    }
+  </style>
+  <section>
+
+
+    <div class="container">
+
+      <div id="textSection" class="get-start">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="left">
+              <p>vivek</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <div class="wrapper">
+                <h4 class="white">Don't let a WhatsApp ban disrupt your communication. Get started now by filling out
+                  the form and taking the first step toward reclaiming your WhatsApp access. Our experts are ready to
+                  assist you, and we're committed to getting you back in touch with your loved ones and business
+                  associates.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
   </section>
 
   <section>
@@ -452,9 +553,10 @@
           <div class="col-lg-12 d-flex justify-content-center align-items-center">
             <div class="head">
               <h3>
-                What are you waiting for?? <span> connect us </span>
+                We're here to help you <span> 24/7 </span>
               </h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur repellat debitis,</p>
+              <p>If you have any questions or need assistance, feel free to contact us at [Your Contact Information] or
+                email us at [Your Email Address]. </p>
               <button class="talk-to-us" data-bs-toggle="modal" data-bs-target="#talktous">Talk to Us</button>
             </div>
           </div>
@@ -594,6 +696,38 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="assets/js/SmoothScrollMouseWheel.js"></script>
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+  <script>
+    console.clear();
+
+    gsap.registerPlugin(SplitText, ScrollTrigger);
+
+    const split = new SplitText(".wrapper h4", {
+      type: "chars"
+    });
+
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#textSection",
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        scrub: 0.75,
+        markers: true
+      }
+    }).
+
+
+      set(split.chars, {
+        color: "#000",
+        stagger: 0.1
+      },
+        0.1);
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,70 @@
+<style>
+
+    #textSection {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background: rgb(122, 38, 38);
+    }
+
+    .blue {
+        background: blue;
+    }
+
+    .green {
+        background: green;
+    }
+/* 
+    .container {
+        width: 600px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    } */
+</style>
+<section class="blue"></section>
+<section id="textSection">
+    <div class="container">
+        <div class="wrapper">
+            <p class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur voluptatem
+                quae ea similique adipisci reprehenderit vero voluptatum, debitis exercitationem nisi ad mollitia?
+                Molestias veniam sint quisquam ea et dolorum nesciunt rem saepe id, amet vero, necessitatibus esse
+                reiciendis molestiae.</p>
+        </div>
+    </div>
+</section>
+<section class="green"></section>
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+<script>
+    console.clear();
+
+    gsap.registerPlugin(SplitText, ScrollTrigger);
+
+    const split = new SplitText(".wrapper p", {
+        type: "chars"
+    });
+
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#textSection",
+            start: "top top",
+            end: "+=150%",
+            pin: true,
+            scrub: 0.75,
+            markers: true
+        }
+    }).
+
+
+        set(split.chars, {
+            color: "#ffcc66",
+            stagger: 0.1
+        },
+            0.1);
+</script>

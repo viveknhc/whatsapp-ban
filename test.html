@@ -1,896 +1,289 @@
-
-<link rel="stylesheet" href="https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css">
-
 <style>
+
+
     body {
-        background-color: #000;
-
-        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Barlow Semi Condensed', sans-serif;
     }
 
-    @font-face {
-        font-family: 'ESL Legend';
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot#iefix) format("embedded-opentype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff2) format("woff2"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff) format("woff"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.ttf) format("truetype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.svg#eicon) format("svg");
-        font-style: normal;
-        font-weight: 300;
+    a:link,
+    a:active,
+    a:visited,
+    a:hover {
+        color: #3f51b5;
     }
 
-    @font-face {
-        font-family: 'ESL Legend';
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot);
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot#iefix) format("embedded-opentype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff2) format("woff2"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff) format("woff"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.ttf) format("truetype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.svg#eicon) format("svg");
-        font-style: normal;
-        font-weight: normal;
+ 
+
+    .testimonial {
+        transform: scale(0.9);
+        margin: 1rem;
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-rows: repeat(2, 22rem);
+        grid-template-columns: repeat(4, 17rem);
     }
 
-    @font-face {
-        font-family: 'ESL Legend';
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot);
-        src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot#iefix) format("embedded-opentype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff2) format("woff2"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff) format("woff"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.ttf) format("truetype"),
-            url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.svg#eicon) format("svg");
-        font-style: normal;
-        font-weight: bold;
+    .eachdiv {
+        padding: 1rem 2rem;
+        border-radius: 0.8rem;
+        box-shadow: 5px 5px 20px #6d6b6b6b;
+        color: white;
     }
 
-    img {
-        max-width: 100%;
-    }
-
-    .ag-format-container {
-        width: 1160px;
-        margin: 0 auto;
-
-        position: relative;
-    }
-
-    .ag-timeline-block {
-        padding: 300px 0;
-    }
-
-    .ag-timeline_title-box {
-        padding: 0 0 30px;
-
-        text-align: center;
-    }
-
-    .ag-timeline_tagline {
-        font-size: 40px;
-        color: rgb(84, 89, 95);
-    }
-
-    .ag-timeline_title {
-        background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
+    .test1 {
+        background: #733FC8;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
         background-repeat: no-repeat;
-        background-position: 50% 50%;
-
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        text-fill-color: transparent;
-        color: transparent;
-
-        font-size: 80px;
+        background-position-x: 25rem;
     }
 
-    .ag-timeline_item {
-        margin: 0 0 50px;
-
-        position: relative;
+    .test2 {
+        background: #49556B;
+        grid-column: 3/4;
+        grid-row: 1/2;
     }
 
-    .ag-timeline_item:nth-child(2n) {
+    .test3 {
+        background: white;
+        grid-column: 4/5;
+        grid-row: 1/3;
+        color: black;
+    }
+
+    .test4 {
+        background: white;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        color: black;
+    }
+
+    .test5 {
+        background: #18202D;
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .userdetails {
+        display: flex;
+    }
+
+    .imgbox {
+        margin-right: 1rem;
+    }
+
+    .imgbox img {
+        border-radius: 50%;
+        width: 2rem;
+        border: 2px solid #cec5c5;
+    }
+
+    .detbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .detbox p {
+        margin: 0;
+    }
+
+    .detbox .name {
+        color: hsl(0, 0%, 81%);
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
+        font-weight: 600;
+    }
+
+    .detbox .name.dark {
+        color: #49505A;
+    }
+
+    .detbox .designation {
+        color: hsl(0, 0%, 81%);
+        opacity: 50%;
+        font-size: 0.8rem;
+    }
+
+    .detbox .designation.dark {
+        color: #49505A;
+    }
+
+    .review h4 {
+        font-size: 1.4rem;
+        color: #F3DEFF;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+
+    .review.dark h4 {
+        color: #4B5258;
+    }
+
+    .review p {
+        font-size: 0.95rem;
+        color: #F3DEFF;
+        font-weight: 500;
+        opacity: 50%;
+        line-height: 1.5;
+    }
+
+    .review.dark p {
+        color: #0e0e0e;
+    }
+
+    .attribution {
+        font-size: 1rem;
+        line-height: 1.5;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
         text-align: right;
     }
 
-    .ag-timeline {
-        display: inline-block;
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-
-        position: relative;
+    .attribution a {
+        text-decoration: none;
     }
 
-    .ag-timeline_line {
-        width: 2px;
-        background-color: #393935;
-
-        position: absolute;
-        top: 2px;
-        left: 50%;
-        bottom: 0;
-
-        overflow: hidden;
-
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    .ag-timeline_line-progress {
-        width: 100%;
-        height: 20%;
-        background-color: #FF0;
-    }
-
-    .ag-timeline-card_box {
-        padding: 0 0 20px 50%;
-    }
-
-    .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-        padding: 0 50% 20px 0;
-    }
-
-    .ag-timeline-card_point-box {
-        display: inline-block;
-        margin: 0 14px 0 -28px;
-    }
-
-    .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-        margin: 0 -28px 0 14px;
-    }
-
-    .ag-timeline-card_point {
-        height: 50px;
-        line-height: 50px;
-        width: 50px;
-        border: 3px solid #FF0;
-        background-color: #1d1d1b;
-
-        text-align: center;
-        font-family: 'ESL Legend', sans-serif;
-        font-size: 20px;
-        color: #FFF;
-
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-    }
-
-    .js-ag-active .ag-timeline-card_point {
-        color: #1d1d1b;
-        background-color: #FF0;
-    }
-
-    .ag-timeline-card_meta-box {
-        display: inline-block;
-    }
-
-    .ag-timeline-card_meta {
-        margin: 10px 0 0;
-
-        font-family: 'ESL Legend', sans-serif;
-        font-weight: bold;
-        font-size: 28px;
-        color: #FF0;
-    }
-
-    .ag-timeline-card_item {
-        display: inline-block;
-        width: 45%;
-        margin: -77px 0 0;
-        background-color: #282828;
-
-        opacity: 0;
-
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-        -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-
-        -webkit-transition: -webkit-transform .5s, opacity .5s;
-        -moz-transition: -moz-transform .5s, opacity .5s;
-        -o-transition: -o-transform .5s, opacity .5s;
-        transition: transform .5s, opacity .5s;
-
-        position: relative;
-    }
-
-    .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
-        -webkit-transform: translateX(-200%);
-        -moz-transform: translateX(-200%);
-        -ms-transform: translateX(-200%);
-        -o-transform: translateX(-200%);
-        transform: translateX(-200%);
-    }
-
-    .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-        -webkit-transform: translateX(200%);
-        -moz-transform: translateX(200%);
-        -ms-transform: translateX(200%);
-        -o-transform: translateX(200%);
-        transform: translateX(200%);
-    }
-
-    .js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-    .js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-        opacity: 1;
-
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    .ag-timeline-card_arrow {
-        height: 18px;
-        width: 18px;
-        margin-top: 20px;
-        background-color: #282828;
-
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-        margin-left: calc(-18px / 2);
-        margin-right: calc(-18px / 2);
-    }
-
-    .ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
-        margin-left: -10px;
-
-        right: auto;
-        left: 0;
-    }
-
-    .ag-timeline-card_img {
-        width: 100%;
-    }
-
-    .ag-timeline-card_info {
-        padding: 20px 30px;
-    }
-
-    .ag-timeline-card_title {
-        display: none;
-        margin: 10px 0 0;
-
-        font-family: 'ESL Legend', sans-serif;
-        font-weight: bold;
-        font-size: 28px;
-        color: #FF0;
-    }
-
-    .ag-timeline-card_desc {
-        line-height: 1.45;
-
-        font-size: 16px;
-        color: #FFF;
-    }
-
-
-    @media only screen and (max-width: 979px) {
-        .ag-timeline_line {
-            left: 30px;
-        }
-
-        .ag-timeline_item:nth-child(2n) {
-            text-align: left;
-        }
-
-        .ag-timeline-card_box,
-        .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-            padding: 0 0 20px;
-        }
-
-        .ag-timeline-card_meta-box {
-            display: none;
-        }
-
-        .ag-timeline-card_point-box,
-        .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-            margin: 0 0 0 8px;
-        }
-
-        .ag-timeline-card_point {
-            height: 40px;
-            line-height: 40px;
-            width: 40px;
-        }
-
-        .ag-timeline-card_item {
-            width: auto;
-            margin: -65px 0 0 75px
-        }
-
-        .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-        .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-            -webkit-transform: translateX(200%);
-            -moz-transform: translateX(200%);
-            -ms-transform: translateX(200%);
-            -o-transform: translateX(200%);
-            transform: translateX(200%);
-        }
-
-        .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-            right: auto;
-            left: 0;
-        }
-
-        .ag-timeline-card_title {
-            display: block;
-        }
-
-        .ag-timeline-card_arrow {
-            margin-top: 12px;
+    @media only screen and (max-width: 1000px) {
+        .testimonial {
+            transform: scale(0.7);
         }
     }
 
-    @media only screen and (max-width: 767px) {
-        .ag-format-container {
-            width: 96%;
-        }
-
-        .ag-timeline-card_img {
-            height: auto;
-            width: auto;
+    @media only screen and (max-width: 800px) {
+        .testimonial {
+            transform: scale(0.6);
         }
     }
 
-    @media only screen and (max-width: 639px) {
-        .ag-timeline_title {
-            font-size: 60px;
+    @media only screen and (max-width: 600px) {
+        .test1 {
+            background-position-x: 10rem;
         }
 
-        .ag-timeline-card_info {
-            padding: 10px 15px;
+        .testimonial  {
+            display: flex;
+            flex-direction: column;
+            transform: scale(1);
+            margin: 2rem;
+            margin-bottom: 5rem;
         }
 
-        .ag-timeline-card_desc {
-            font-size: 14px;
+        .attribution {
+            position: relative;
         }
-    }
-
-    @media only screen and (max-width: 479px) {}
-
-    @media (min-width: 768px) and (max-width: 979px) {
-        .ag-format-container {
-            width: 750px;
-        }
-
-    }
-
-    @media (min-width: 980px) and (max-width: 1161px) {
-        .ag-format-container {
-            width: 960px;
-        }
-
     }
 </style>
 
-<div class="ag-timeline-block">
-    <div class="ag-timeline_title-box">
-        <div class="ag-timeline_tagline">Timeline</div>
-        <div class="ag-timeline_title">No Flex</div>
-    </div>
-    <section class="ag-section">
-        <div class="ag-format-container">
-            <div class="js-timeline ag-timeline">
-                <div class="js-timeline_line ag-timeline_line">
-                    <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+
+    <div class="testimonial">
+        <!-- test1 -->
+        <div class="test1 eachdiv">
+            <div class="userdetails">
+                <div class="imgbox">
+                    <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-daniel.jpg"
+                        alt="">
                 </div>
-                <div class="ag-timeline_list">
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2021</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 13</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-13.png"
-                                        class="ag-timeline-card_img" width="640" height="360" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 13</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                        eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                                        eu,
-                                        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 12</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2020</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 12</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                                        eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2020</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 11</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-11.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 11</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Aenean imperdiet. Etiam ultricies
-                                        nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                                        rhoncus.
-                                        Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
-                                        amet
-                                        adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                        hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                        sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                        eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 10</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2019</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-10.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 10</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Cum sociis natoque penatibus et magnis dis parturient
-                                        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                                        eu,
-                                        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2019</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 9</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-9.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 9</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                                        nisi vel augue. Curabitur ullamcorper ultricies nisi.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 8</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2018</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-8.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 8</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Donec quam felis, ultricies nec, pellentesque eu,
-                                        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2018</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 7</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-7.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 7</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                                        nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                                        rhoncus.
-                                        Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
-                                        amet
-                                        adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                        hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 6</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2017</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-6.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 6</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet. Quisque rutrum.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2017</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 5</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-5.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 5</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                                        eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                                        nisi vel augue. Curabitur ullamcorper ultricies nisi.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 4</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2016</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-4.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 4</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                                        eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2016</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 3</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-3.png"
-                                        class="ag-timeline-card_img" width="640" height="360" alt="" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 3</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                        Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
-                                        amet
-                                        adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                        hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                        sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                        eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 2</div>
-                            </div>
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2015</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-2.png"
-                                        class="ag-timeline-card_img" width="640" height="360" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 2</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Aenean vulputate eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                                        viverra
-                                        nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                                        nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
-
-                    <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                            <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                                <div class="ag-timeline-card_point">2015</div>
-                            </div>
-                            <div class="ag-timeline-card_meta-box">
-                                <div class="ag-timeline-card_meta">Season 1</div>
-                            </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                            <div class="ag-timeline-card_inner">
-                                <div class="ag-timeline-card_img-box">
-                                    <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-1.png"
-                                        class="ag-timeline-card_img" width="640" height="360" />
-                                </div>
-                                <div class="ag-timeline-card_info">
-                                    <div class="ag-timeline-card_title">Season 1</div>
-                                    <div class="ag-timeline-card_desc">
-                                        Donec pede justo, fringilla
-                                        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                        tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                                        eleifend
-                                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ag-timeline-card_arrow"></div>
-                        </div>
-                    </div>
+                <div class="detbox">
+                    <p class="name">Daniel Clifford</p>
+                    <p class="designation">Verified Graduate</p>
                 </div>
             </div>
+            <div class="review">
+                <h4>I received a job offer mid-course, and the subjects I learned were current, if not more so, in the
+                    company I joined. I honestly feel I got every penny’s worth.</h4>
+                <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition
+                    and have heard some people who had an amazing experience here. I signed up for the free intro course
+                    and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and
+                    most grueling - time of my life. Since completing the course, I’ve successfully switched careers,
+                    working as a Software Engineer at a VR startup. ”</p>
+            </div>
         </div>
-    </section>
-</div>
+        <!-- test2 -->
+        <div class="test2 eachdiv">
+            <div class="userdetails">
+                <div class="imgbox">
+                    <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jonathan.jpg"
+                        alt="">
+                </div>
+                <div class="detbox">
+                    <p class="name">Jonathan Walters</p>
+                    <p class="designation">Verified Graduate</p>
+                </div>
+            </div>
+            <div class="review">
+                <h4>The team was very supportive and kept me motivated</h4>
+                <p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a
+                    big company. This was one of the best investments I’ve made in myself. ”</p>
+            </div>
+        </div>
+        <!-- test3 -->
+        <div class="test3 eachdiv">
+            <div class="userdetails">
+                <div class="imgbox">
+                    <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-kira.jpg"
+                        alt="">
+                </div>
+                <div class="detbox">
+                    <p class="name dark">Kira Whittle</p>
+                    <p class="designation dark">Verified Graduate</p>
+                </div>
+            </div>
+            <div class="review dark">
+                <h4>Such a life-changing experience. Highly recommended!</h4>
+                <p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+                    professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+                    student of theirs who can only say wonderful things about the program. The entire curriculum and
+                    staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The
+                    agile team project, in particular, was outstanding. It took my learning to the next level in a way
+                    that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example
+                    of experience. It certainly helped me land a job as a full-stack 100% recommend! ”</p>
+            </div>
+        </div>
+        <!-- test4 -->
+        <div class="test4 eachdiv">
+            <div class="userdetails">
+                <div class="imgbox">
+                    <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jeanette.jpg"
+                        alt="">
+                </div>
+                <div class="detbox">
+                    <p class="name dark">Jeanette Harmon</p>
+                    <p class="designation dark">Verified Graduate</p>
+                </div>
+            </div>
+            <div class="review dark">
+                <h4>An overall wonderful and rewarding experience</h4>
+                <p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+                    while doing something I love. ”</p>
+            </div>
+        </div>
+        <!-- test5 -->
+        <div class="test5 eachdiv">
+            <div class="userdetails">
+                <div class="imgbox">
+                    <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-patrick.jpg"
+                        alt="">
+                </div>
+                <div class="detbox">
+                    <p class="name">Patrick Abrams</p>
+                    <p class="designation">Verified Graduate</p>
+                </div>
+            </div>
+            <div class="review">
+                <h4>Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
+                    learning from their experiences was easy.</h4>
+                <p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+                    gave me the confidence necessary to be able to go out in the world and present myself as a capable
+                    junior developer. The standard is above the rest. You will get the personal attention you need from
+                    an incredible community of smart and amazing people. ”</p>
+            </div>
+        </div>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-    (function ($) {
-        $(function () {
-
-
-            $(window).on('scroll', function () {
-                fnOnScroll();
-            });
-
-            $(window).on('resize', function () {
-                fnOnResize();
-            });
-
-
-            var agTimeline = $('.js-timeline'),
-                agTimelineLine = $('.js-timeline_line'),
-                agTimelineLineProgress = $('.js-timeline_line-progress'),
-                agTimelinePoint = $('.js-timeline-card_point-box'),
-                agTimelineItem = $('.js-timeline_item'),
-                agOuterHeight = $(window).outerHeight(),
-                agHeight = $(window).height(),
-                f = -1,
-                agFlag = false;
-
-            function fnOnScroll() {
-                agPosY = $(window).scrollTop();
-
-                fnUpdateFrame();
-            }
-
-            function fnOnResize() {
-                agPosY = $(window).scrollTop();
-                agHeight = $(window).height();
-
-                fnUpdateFrame();
-            }
-
-            function fnUpdateWindow() {
-                agFlag = false;
-
-                agTimelineLine.css({
-                    top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
-                    bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
-                });
-
-                f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
-            }
-
-            function fnUpdateProgress() {
-                var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
-
-                i = agTop + agPosY - $(window).scrollTop();
-                a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
-                n = agPosY - a + agOuterHeight / 2;
-                i <= agPosY + agOuterHeight / 2 && (n = i - a);
-                agTimelineLineProgress.css({ height: n + "px" });
-
-                agTimelineItem.each(function () {
-                    var agTop = $(this).find(agTimelinePoint).offset().top;
-
-                    (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
-                })
-            }
-
-            function fnUpdateFrame() {
-                agFlag || requestAnimationFrame(fnUpdateWindow);
-                agFlag = true;
-            }
-
-
-        });
-    })(jQuery);
-
-</script>

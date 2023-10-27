@@ -35,6 +35,16 @@
         font-size: 16px;
 
     }
+
+    #textSection .wrapper h4 {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: apple-font;
+        color: #888787;
+    }
+    #textSection {
+        height: auto;
+    }
 }
 
 
@@ -234,6 +244,17 @@
 
     .working .timeline ul li p {
         font-size: 16px;
+    }
+
+    #textSection .wrapper h4 {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: apple-font;
+        color: #888787;
+    }
+
+    #textSection {
+        height: auto;
     }
 
 

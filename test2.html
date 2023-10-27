@@ -1,70 +1,67 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure JavaScript Text Animation</title>
+    <style>
 
-    #textSection {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        background: rgb(122, 38, 38);
-    }
-
-    .blue {
-        background: blue;
-    }
-
-    .green {
-        background: green;
-    }
-/* 
-    .container {
-        width: 600px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-    } */
-</style>
-<section class="blue"></section>
-<section id="textSection">
-    <div class="container">
-        <div class="wrapper">
-            <p class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur voluptatem
-                quae ea similique adipisci reprehenderit vero voluptatum, debitis exercitationem nisi ad mollitia?
-                Molestias veniam sint quisquam ea et dolorum nesciunt rem saepe id, amet vero, necessitatibus esse
-                reiciendis molestiae.</p>
-        </div>
-    </div>
-</section>
-<section class="green"></section>
-
-<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
-<script>
-    console.clear();
-
-    gsap.registerPlugin(SplitText, ScrollTrigger);
-
-    const split = new SplitText(".wrapper p", {
-        type: "chars"
-    });
-
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#textSection",
-            start: "top top",
-            end: "+=150%",
-            pin: true,
-            scrub: 0.75,
-            markers: true
+        .wrapper {
+            position: relative;
+            height: 300vh; /* Adjust as needed */
         }
-    }).
+        .wrapper p {
+            font-size: 24px;
+            color: transparent;
+            display: inline-block;
+        }
+        section{
+            height: 100vh ;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        dfk;;sd.fs
+    </section>
 
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit <span>fgdfdhj</span> amet consectetur adipisicing elit. Veniam officia explicabo consectetur molestias aliquam voluptatibus dicta quaerat, officiis corporis mollitia odio sapiente repellendus quis! Veniam suscipit velit obcaecati nobis possimus.</p>
+    </div>
 
-        set(split.chars, {
-            color: "#ffcc66",
-            stagger: 0.1
-        },
-            0.1);
-</script>
+    <section>
+        dfk;;sd.fs
+    </section>
+
+    <script>
+        // Get the text element
+        const textElement = document.querySelector(".wrapper p");
+        const text = textElement.textContent;
+
+        // Clear the text content
+        textElement.textContent = '';
+
+        // Split the text into characters
+        for (const char of text) {
+            const charSpan = document.createElement('span');
+            charSpan.textContent = char;
+            textElement.appendChild(charSpan);
+        }
+
+        // Apply animation and styling
+        const chars = textElement.querySelectorAll('span');
+        chars.forEach((char, index) => {
+            char.style.transition = 'color 0.5s';
+            char.style.transitionDelay = `${0.1 * index}s`;
+            char.style.color = '#ffcc66';
+        });
+
+        // Add a scroll event listener
+        window.addEventListener('scroll', () => {
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            textElement.style.transform = `translateY(-${scrollPercentage}%)`;
+        });
+    </script>
+</body>
+</html>

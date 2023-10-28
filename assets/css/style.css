@@ -163,7 +163,7 @@ header nav .navbar-collapse li a {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 10%;
+    bottom: 25%;
     z-index: 11;
 }
 
@@ -171,8 +171,8 @@ header nav .navbar-collapse li a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -331,6 +331,11 @@ header nav .navbar-collapse li a {
     border: none;
 }
 
+
+.faq .accordion-item .show {
+    background-color: #e4faec;
+}
+
 .faq .accordion-button {
     border: none !important;
     font-size: 25px;
@@ -412,6 +417,7 @@ header nav .navbar-collapse li a {
     background: var(--primary-color);
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgb(195 255 217);
+    animation: zoom 3s infinite linear;
 }
 
 .working .timeline ul li:nth-child(even):before {
@@ -581,10 +587,38 @@ header nav .navbar-collapse li a {
     border: 1px solid #ededed;
 }
 
-#talktous .close-btn {
+/* #talktous .close-btn {
     max-width: 20px;
     cursor: pointer;
+} */
+
+#talktous .modal-body .img-box img{
+    max-width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 22%;
+
 }
+
+
+#talktous .modal-body .left .content-box{
+    padding: 100px 0 0 0;
+    text-align: center;
+      
+
+}
+
+
+#talktous .modal-body .left .content-box h3{
+    font-weight: 600;
+}
+
+
+#talktous .modal-body .left .content-box p{
+
+    color: #00000087;
+}
+
 
 
 
@@ -609,7 +643,7 @@ header nav .navbar-collapse li a {
 
 */
 
-#talktous input[type=date]::-webkit-calendar-picker-indicator:active {
+/* #talktous input[type=date]::-webkit-calendar-picker-indicator:active {
     color: blue;
 }
 
@@ -624,7 +658,7 @@ header nav .navbar-collapse li a {
 #talktous input::placeholder {
     padding: 0 0 0 10px;
     font-size: 14px;
-    /* color: red; */
+
 }
 
 
@@ -632,8 +666,9 @@ header nav .navbar-collapse li a {
     display: block;
     display: block;
     padding: 0 0 10px 0;
-    font-size: 14px;
-    color: #a7a7a7;
+    font-size: 18px;
+    font-weight: 100;
+    color: #000000;
     font-family: apple-font;
 }
 
@@ -643,7 +678,7 @@ header nav .navbar-collapse li a {
 
 #talktous .modal-head h3 {
     color: #888787;
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 600;
 }
 
@@ -663,7 +698,8 @@ header nav .navbar-collapse li a {
 
 .modal-body {
     padding: 0;
-}
+    background-color: #ececec;
+} */
 
 /* #talktous .modal-content{
     background: rgb(219, 255, 244);
@@ -673,6 +709,93 @@ header nav .navbar-collapse li a {
     
 }
  */
+
+
+#talktous .modal-body .left {
+    background-color: rgb(222 255 213);
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+
+#talktous .modal-body form label {
+    display: block;
+    padding: 0 0 10px 0;
+    color: #061b00;
+    font-size: 18px;
+}
+
+#talktous .modal-body {
+    padding: 24px 36px !important;
+}
+
+
+#talktous .modal-content {
+    border: none;
+}
+
+
+
+
+/* #talktous .modal-body form h4{
+    display: inline;
+ } */
+
+#talktous .modal-body .row .col-lg-6 {
+    padding: 24px 0;
+}
+
+#talktous .modal-body .row input[type='text'],
+#talktous .modal-body .row input[type='email'],
+#talktous .modal-body .row input[type='phone'] {
+    width: 90%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #ededed;
+}
+
+
+#talktous .modal-body .row input[type='radio'] {
+    height: 20px;
+    width: 20px;
+}
+
+#talktous .modal-body .bann-number-box {
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 0;
+}
+
+
+#talktous .modal-body .form-box {
+    background-color: #f6fff4;
+    padding: 45px;
+}
+
+#talktous .modal-body .form-box label{
+    font-size: 18px;
+}
+
+
+#talktous .modal-body .form-box button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    color: var(--white-color);
+    border-radius: 10px;
+}
+
+#talktous .modal-body .form-box .close-btn{
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+
+}
+
+
 
 footer {
     padding: 140px 0;
@@ -858,7 +981,7 @@ footer .footer-bottom .social-icon img {
 
 /* TESTIMONIAL */
 
-.testimonial{
+.testimonial {
     height: 100vh;
 }
 
@@ -988,7 +1111,7 @@ footer .footer-bottom .social-icon img {
 
 
 
-@keyframes zoom-in-zoom-out {
+@keyframes zoom {
     0% {
         transform: scale(1, 1);
     }

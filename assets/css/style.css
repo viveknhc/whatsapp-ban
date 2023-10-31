@@ -317,6 +317,10 @@ header nav .navbar-collapse li a {
 
 /* FAQ */
 
+.faq-banner{
+    padding: 0 !important;
+}
+
 .faq .head h3 {
     color: #000;
     font-size: 40px;
@@ -815,7 +819,7 @@ footer {
 
 
 footer .logo {
-    max-width: 400px;
+    max-width: 265px;
 }
 
 footer hr {
@@ -884,15 +888,10 @@ footer .footer-bottom .social-icon img {
 
 }
 
-
-
 .inner-page .banner-content {
     width: 100%;
     text-align: center;
 }
-
-
-
 
 .inner-page .banner-content h1 span {
     font-size: 3.75rem;
@@ -902,13 +901,10 @@ footer .footer-bottom .social-icon img {
 
 }
 
-
 .inner-page .banner-content p {
     font-size: 22px;
     color: #a2a2a2;
 }
-
-
 
 .about .banner-tag-box h4 {
     color: #B9B8B8;
@@ -934,8 +930,6 @@ footer .footer-bottom .social-icon img {
     padding: 14px 14px;
     width: 22rem;
 }
-
-
 
 .pricing .card .top-text {
     color: #000;

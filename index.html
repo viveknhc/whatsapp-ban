@@ -34,16 +34,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Service</a>
-            </li>
+    
             <li class="nav-item">
               <a class="nav-link" href="pricing.html">Pricing</a>
             </li>
           </ul>
 
           <div class="d-flex">
-            <button data-bs-toggle="modal" data-bs-target="#talktous" type="submit">Ban Removel Request</button>
+            <button data-bs-toggle="modal" data-bs-target="#talktous" type="submit">Request Ban Removel</button>
           </div>
 
         </div>
@@ -62,7 +60,7 @@
                 Our dedicated WhatsApp ban removal service is designed to assist you in recovering your WhatsApp account
                 swiftly and hassle-free. We understand the importance of staying connected, and we're committed to
                 getting you back in action.</p>
-              <button data-bs-toggle="modal" data-bs-target="#talktous" class="talk-to-us">Ban Removel Request</button>
+              <button data-bs-toggle="modal" data-bs-target="#talktous" class="talk-to-us">Request Ban Removel</button>
             </div>
 
           </div>
@@ -602,7 +600,7 @@
               </h3>
               <p>If you have any questions or need assistance, feel free to contact us at [Your Contact Information] or
                 email us at [Your Email Address]. </p>
-              <button class="talk-to-us" data-bs-toggle="modal" data-bs-target="#talktous">Ban Removel Request</button>
+              <button class="talk-to-us" data-bs-toggle="modal" data-bs-target="#talktous">Request Ban Removel</button>
             </div>
           </div>
           <!-- <div class="col-lg-4">
@@ -677,7 +675,7 @@
 
             <div class="col-lg-4 left">
               <div class="content-box">
-                <h3>Whatapp Ban Removel Request</h3>
+                <h3>Whatapp Request Ban Removel</h3>
                 <p>Please fill the form for requesting</p>
               </div>
 
@@ -694,16 +692,27 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <label for="">Name</label>
-                      <input type="text" placeholder="enter your name...">
+                      <input type="text" placeholder="Enter your Name">
                     </div>
                     <div class="col-lg-6">
                       <label for="">Email</label>
-                      <input type="email" placeholder="enter your email...">
+                      <input type="email" placeholder="Enter your Email">
                     </div>
 
                     <div class="col-lg-6">
                       <label for="">Contact Number</label>
-                      <input type="phone" placeholder="enter your phone number...">
+                      <input type="phone" placeholder="Enter your Phone Number">
+                    </div>
+
+              
+                    <div class="col-lg-6">
+                      <label for="">Banned Count</label>
+                      <input type="text" placeholder="Enter Your Banned Count">
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label for="">Date of Ban</label>
+                      <input type="date">
                     </div>
 
                     <div class="col-lg-6">
@@ -711,30 +720,18 @@
                       <label for="">Banned Number (Number of Times) </label>
                       <div class="d-flex">
                         <div class="bann-number-box">
-                          <h4 for="" class="pe-2 m-0 pb-0 pt-1">1</h4>
+                          <h4 for="" class="pe-xl-1 m-0 pb-0">1</h4>
                           <input name="banned number" id="1" type="radio">
                         </div>
                         <div class="bann-number-box">
-                          <h4 for="" class="pe-2 m-0 pb-0 pt-1">2</h4>
+                          <h4 for="" class="pe-xl-1 m-0 pb-0">2</h4>
                           <input name="banned number" id="1" type="radio">
                         </div>
                         <div class="bann-number-box">
-                          <h4 for="" class="pe-2 m-0 pb-0 pt-1">3+</h4>
+                          <h4 for="" class="pe-xl-1 m-0 pb-0">3+</h4>
                           <input name="banned number" id="1" type="radio">
                         </div>
                       </div>
-                    
-
-
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="">Banned Count</label>
-                      <input type="text" placeholder="enter your banner count...">
-                    </div>
-
-                    <div class="col-lg-6">
-                      <label for="">Date of Ban</label>
-                      <input type="date">
                     </div>
 
                     <div class="col-lg-12">
@@ -785,12 +782,12 @@
               nav: false
             },
             680: {
-              items: 2,
+              items: 1,
               nav: false,
               loop: false
             },
             1000: {
-              items: 3,
+              items: 1,
               nav: true
             }
           }

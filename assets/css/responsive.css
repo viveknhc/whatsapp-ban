@@ -40,7 +40,7 @@
         font-size: 24px;
         font-weight: 600;
         font-family: apple-font;
-        color: #888787;
+        color: #000;
     }
 
     #textSection {
@@ -96,7 +96,7 @@
     }
 
     .head h3 {
-        color: #888787;
+        color: #000;
         font-size: 25px;
     }
 
@@ -267,7 +267,7 @@
         font-size: 24px;
         font-weight: 600;
         font-family: apple-font;
-        color: #888787;
+        color: #000;
     }
 
     #textSection {

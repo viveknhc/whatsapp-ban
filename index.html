@@ -7,7 +7,8 @@
   <title>Whatsapp Bann</title>
 
 
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
@@ -60,7 +61,7 @@
                 Our dedicated WhatsApp ban removal service is designed to assist you in recovering your WhatsApp account
                 swiftly and hassle-free. We understand the importance of staying connected, and we're committed to
                 getting you back in action.</p>
-              <button data-bs-toggle="modal" data-bs-target="#talktous" class="talk-to-us">Request Ban Removel</button>
+              <button data-bs-toggle="modal" data-bs-target="#talktous" type="submit" class="talk-to-us">Request Ban Removel</button>
             </div>
 
           </div>
@@ -102,7 +103,7 @@
             your specific needs</h3>
         </div>
         <div class="price-box">
-          <div class="row g-lg-0 g-md-3 g-3">
+          <div class="row g-lg-3 g-md-3 g-3">
             <div class="col-lg-4 col-md-4 d-flex justify-content-center">
               <div class="card h-100">
                 <div class="card-body">
@@ -175,7 +176,9 @@
     </div>
   </section>
 
-  <section>1
+  <!-- WHY CHOOSE -->
+
+  <section>
     <div class="feature">
       <img class="img-fluid bg-shadow" src="assets/images/banner-shadow.png" alt="image">
       <div class="text-center head container">
@@ -237,6 +240,8 @@
       </div>
     </div>
   </section>
+
+  <!-- STEPS -->
 
   <section>
     <div class="container">
@@ -323,6 +328,8 @@
     </div>
   </section>
 
+  <!-- TESTIMONIAL -->
+
   <section>
     <div class="testimonial">
       <div class="text-center head container">
@@ -391,6 +398,7 @@
     </div>
   </section>
 
+  <!-- FAQ -->
 
   <section>
     <div class="container">
@@ -588,6 +596,59 @@
     </div>
   </section>
 
+  <!-- BLOG -->
+  <section>
+    <div class="blog container">
+      <div class="head container">
+        <h3>
+          Blog -<span> WhatsApp Ban </span> Removal <br>
+          Blogs
+        </h3>
+      </div>
+
+      <div>
+        <div class="owl-carousel blog-carousel owl-theme">
+          <div class="item">
+            <div class="card h-100">
+              <img src="assets/images/blog1.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body ps-0">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit rem, consectetur
+                  ea rerum nemo ex, reprehenderit, officiis </p>
+
+                <a class="read-more" href="blog-detail.html">
+                  <span class="hover-underline-animation"> Read More</span>
+                  <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                    id="arrow-horizontal">
+                    <path transform="translate(30)"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                      id="Path_10"></path>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- <div>
+          <button class="custom-prev">Previous</button>
+          <button class="custom-next">Next</button>
+        </div> -->
+
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+    </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section>
     <div class="container">
       <div class="contact-us">
@@ -612,13 +673,17 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <h4>Whatsapp ban</h4>
           <a href="about.html">
-            <p>About us</p>
+            <p class="m-0">About us</p>
+          </a>
+          <a href="blog.html">
+            <p>Blog</p>
           </a>
 
         </div>
@@ -662,28 +727,18 @@
   <div class="modal fade" id="talktous" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
-
         <div class="modal-body">
-          <!-- <div class="text-end">
-            <img class="img-fluid close-btn" src="assets/images/close-btn.png" alt="image" data-bs-dismiss="modal">
-          </div> -->
-
           <div class="row">
-
             <div class="col-lg-4 left">
               <div class="content-box">
                 <h3>Whatapp Request Ban Removel</h3>
                 <p>Please fill the form for requesting</p>
               </div>
-
               <div class="img-box">
-
                 <img class="img-fluid" src="assets/images/modal-form.png" alt="image">
               </div>
-
             </div>
             <div class="col-lg-8">
-
               <div class="form-box">
                 <form action="">
                   <div class="row">
@@ -708,13 +763,13 @@
                     </div>
 
                     <div class="col-lg-6">
-                      <label for="">Date of Ban</label>
+                      <label for="" class="doban">Date of Ban</label>
                       <input type="date">
                     </div>
 
                     <div class="col-lg-6">
 
-                      <label for="">Banned Number (Number of Times) </label>
+                      <label class="ban-no-times" for="">Banned Number (Number of Times) </label>
                       <div class="d-flex">
                         <div class="bann-number-box">
                           <h4 for="" class="pe-xl-1 m-0 pb-0">1</h4>
@@ -762,7 +817,43 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
   <script>
+    $(document).ready(function () {
+      var owl = $('.blog-carousel');
+
+      owl.owlCarousel({
+        // stagePadding: 50,
+        loop: true,
+        margin: 10,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+
+      // Custom "Next" button
+      $(".custom-next").click(function () {
+        owl.trigger('.blog-carousel.next.owl.carousel');
+      });
+
+      // Custom "Previous" button
+      $(".custom-prev").click(function () {
+        owl.trigger('.blog-carousel.prev.owl.carousel');
+      });
+    });
+  </script>
+
+  <script>
+    // TESTIMONIAL
     (function () {
       "use strict";
       var carousels = function () {
@@ -798,6 +889,8 @@
 
 
 
+
+
     // DOM element to hold the animation
     const container = document.getElementById('lottie-container');
 
@@ -817,37 +910,6 @@
 
   </script>
 
-  <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
-  <script>
-    console.clear();
-
-    gsap.registerPlugin(SplitText, ScrollTrigger);
-
-    const split = new SplitText(".wrapper h4", {
-      type: "chars"
-    });
-
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#textSection",
-        start: "top top",
-        end: "+=150%",
-        pin: true,
-        scrub: 0.75,
-        markers: true
-      }
-    }).
-
-
-      set(split.chars, {
-        color: "#000",
-        stagger: 0.1
-      },
-        0.1);
-  </script> -->
 </body>
 
 </html>

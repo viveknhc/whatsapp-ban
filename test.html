@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Owl Carousel</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <div class="owl-carousel owl-theme">
+    
+        <div class="item">
+            <h4>1</h4>
+        </div>
+        <div class="item">
+            <h4>2</h4>
+        </div>
+        <div class="item">
+            <h4>3</h4>
+        </div>
+        <div class="item">
+            <h4>4</h4>
+        </div>
+        <div class="item">
+            <h4>5</h4>
+        </div>
+        <div class="item">
+            <h4>6</h4>
+        </div>
+        <div class="item">
+            <h4>7</h4>
+        </div>
+        <div class="item">
+            <h4>8</h4>
+        </div>
+        <div class="item">
+            <h4>9</h4>
+        </div>
+        <div class="item">
+            <h4>10</h4>
+        </div>
+        <div class="item">
+            <h4>11</h4>
+        </div>
+        <div class="item">
+            <h4>12</h4>
+        </div>
+    </div>
+
+    <!-- Custom "Next" and "Previous" buttons -->
+    <button class="custom-prev">Previous</button>
+    <button class="custom-next">Next</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var owl = $('.owl-carousel');
+
+            owl.owlCarousel({
+                stagePadding: 50,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            // Custom "Next" button
+            $(".custom-next").click(function(){
+                owl.trigger('next.owl.carousel');
+            });
+
+            // Custom "Previous" button
+            $(".custom-prev").click(function(){
+                owl.trigger('prev.owl.carousel');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -49,17 +49,26 @@
 
     /* MODEL */
 
-    #talktous .modal-body .img-box {
-        display: none;
+    #talktous .modal-body .left .content-box {
+        padding: 23px 0 158px 0;
+        text-align: center;
     }
 
     #talktous .modal-body .left .content-box {
-        padding: 50px 0;
+        padding: 34px 0 132px 0;
         text-align: center;
     }
 
     #talktous .modal-body .row .col-lg-6 {
         padding: 10px 0;
+    }
+
+    #talktous .modal-body .img-box img {
+        max-width: 100px;
+    }
+
+    .testimonial {
+        height: auto;
     }
 
 }
@@ -274,19 +283,116 @@
         height: auto;
     }
 
-    /* MODEL */
 
+    .gtco-testimonials .owl-dots {
+       display: none;
+    }
+
+
+    /* BLOG */
+
+    .blog-detail-page-section {
+        margin: auto;
+    }
+    .blog-detail-page {
+        height: 30vh;
+        background-size: contain;
+    }
+    .blog-detail-page .date {
+display: none;
+    }
+    .blog-detail-page-section h1 {
+        padding: 21px 0 22px 0;
+        font-size: 26px;
+    }
+
+    .blog-detail-page-section .blog-alignment{
+        padding: 0 10px;
+    }
+
+    .blog-detail-page-section h5 {
+        color: #747474;
+        font-size: 16px;
+    }
+
+    .blog-detail-page-section h6 {
+        color: #303030;
+        font-size: 13px;
+    }
+
+    .blog {
+        height: auto;
+    }
+
+    .blog-carousel .card .card-title {
+        font-size: 18px;
+    }
+
+    .blog-carousel .card .card-text {
+        font-size: 14px;
+    }
+
+
+    .blog-carousel .card .read-more span {
+        font-size: 12px;
+    }
+
+
+    /* MODAL */
+/* 
     #talktous .modal-body .img-box {
         display: none;
+    } */
+
+    #talktous .modal-body .img-box img {
+        max-width: 100px;
     }
 
-    #talktous .modal-body .form-box {
-        background-color: #f6fff4;
-        padding: 27px;
+    #talktous .modal-body .left .content-box {
+        padding: 23px 0 158px 0;
+        text-align: center;
     }
+
     #talktous .modal-body .form-box label {
         font-size: 14px;
     }
+
+    #talktous .modal-body .form-box {
+        padding: 15px 0 !important;
+    
+    }
+
+    #talktous .modal-body .form-box label {
+        /* font-size: 14px; */
+        display: none;
+    }
+    
+    #talktous .modal-body .form-box .doban{
+        display: block;
+    }
+
+    #talktous .modal-body .form-box .ban-no-times{
+        display: block;
+    }
+    
+    
+
+    #talktous .modal-body .row input[type='text'], #talktous .modal-body .row input[type='email'], #talktous .modal-body .row input[type='phone'] {
+        width: 100%;
+    }
+
+    #talktous input[type="date"] {
+        width: 100%;
+    }
+
+    #talktous .modal-body .form-box .close-btn {
+        padding: 6px 12px;
+    }
+
+    #talktous .modal-body .form-box button {
+        padding: 6px 12px;
+    }
+
 
 
 }

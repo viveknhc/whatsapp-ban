@@ -114,6 +114,9 @@ header nav button {
 }
 
 .talk-to-us {
+    z-index: 111;
+    position: sticky;
+
     font-weight: 100;
     font-size: 20px;
     background-color: var(--primary-color);
@@ -321,7 +324,7 @@ header nav .navbar-collapse li a {
 
 /* FAQ */
 
-.faq-banner{
+.faq-banner {
     padding: 0 !important;
 }
 
@@ -604,29 +607,31 @@ header nav .navbar-collapse li a {
     cursor: pointer;
 } */
 
-#talktous .modal-body .img-box img{
+#talktous .modal-body .img-box img {
     max-width: 200px;
     position: absolute;
     bottom: 0;
-    left: 22%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
 
 }
 
 
-#talktous .modal-body .left .content-box{
+#talktous .modal-body .left .content-box {
     padding: 100px 0 0 0;
     text-align: center;
-      
+
 
 }
 
 
-#talktous .modal-body .left .content-box h3{
+#talktous .modal-body .left .content-box h3 {
     font-weight: 600;
 }
 
 
-#talktous .modal-body .left .content-box p{
+#talktous .modal-body .left .content-box p {
 
     color: #00000087;
 }
@@ -780,7 +785,7 @@ header nav .navbar-collapse li a {
     padding: 0 18px 0 0;
 }
 
-#talktous .modal-body .bann-number-box h4{
+#talktous .modal-body .bann-number-box h4 {
     font-size: 20px;
 }
 
@@ -792,7 +797,7 @@ header nav .navbar-collapse li a {
     padding: 45px;
 }
 
-#talktous .modal-body .form-box label{
+#talktous .modal-body .form-box label {
     font-size: 18px;
 }
 
@@ -805,7 +810,7 @@ header nav .navbar-collapse li a {
     border-radius: 10px;
 }
 
-#talktous .modal-body .form-box .close-btn{
+#talktous .modal-body .form-box .close-btn {
     background-color: #fff;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
@@ -1114,10 +1119,147 @@ footer .footer-bottom .social-icon img {
 }
 
 
+.blog {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.blog h3 {
+    font-size: 40px !important;
+}
+
+/* 
+.blog .blog-carousel{
+    padding: 0 0 0 100px;
+} */
 
 
+/* BLOG PAGE */
+
+.blog-detail-page-section {
+    margin: 90px 0 0 140px;
+}
+
+.blog-detail-page {
+    position: relative;
+    height: 60vh;
+    background-image: url(../images/blog-inner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blog-detail-page .date {
+    rotate: -90deg;
+    position: absolute;
+    left: -137px;
+    bottom: 66px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #606060;
+    text-transform: uppercase;
+}
+
+.blog-detail-page .date sup {
+    text-transform: lowercase;
+}
+
+.blog-detail-page-section h1 {
+    padding: 36px 0 45px 0;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blog-detail-page-section h5 {
+    color: #747474;
+}
 
 
+.blog-detail-page-section h6 {
+    color: #303030;
+}
+
+.blog-detail-page-section .content span {
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+}
+
+
+.blog-carousel .card {
+    border: none;
+    border-radius: 0;
+}
+
+.blog-carousel .card img {
+    border-radius: 0;
+}
+
+.blog .blog-card-box {
+    padding: 0 0 0 42rem;
+}
+
+.blog-carousel .card .card-title {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.blog-carousel .card .card-text {
+    font-size: 18px;
+}
+
+.blog-carousel .card .read-more {
+    text-decoration: none;
+}
+
+
+.blog-carousel .card .read-more span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.blog-carousel .card .read-more svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.blog-carousel .card .read-more:hover svg {
+    transform: translateX(0);
+}
+
+.blog-carousel .card .read-more:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.blog-carousel .card .read-more:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 @keyframes zoom {
     0% {
